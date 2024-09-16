@@ -20,7 +20,7 @@ const Navbar = () => {
       <div
        className="w-full  bg-gray-800 px-2 text-white text-sm py-2 flex justify-center items-center">
         <div className="flex space-x-9">
-          <span className='flex flex-row'><IoCall className='h-4 w-6 pt-1' /><a href="tel:+1234567890">Phone: (+92) 234 567890</a></span>
+          <span className='flex flex-row'><IoCall className='h-4 w-6 pt-1' /><a href="tel:+1234567890">Phone: (+92) 321 7080012</a></span>
           <span className='flex flex-row cursor-pointer' onClick={handleMassageSubmit}><IoLogoWhatsapp className='h-4 w-6 pt-1' />+92 345 67895</span>
           <span className='flex flex-row'><MdDateRange  className='h-4 w-6 pt-1' /> Mon - Fri 9am - 7pm</span>
         </div>

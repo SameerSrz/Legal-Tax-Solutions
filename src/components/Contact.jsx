@@ -26,7 +26,7 @@ const Contact = () => {
             </div>
             <div className="flex items-center space-x-3">
               <IoCall />
-              <p className="text-gray-700">+92 345 67895</p>
+              <p className="text-gray-700">+92 321 7080012</p>
             </div>
             <div className="flex items-center space-x-3">
               <FaAddressBook />
@@ -34,7 +34,7 @@ const Contact = () => {
             </div>
             <div className="flex items-center space-x-3 cursor-pointer" onClick={handleMassageSubmit}>
               <IoLogoWhatsapp />
-              <p className="text-gray-700">+92 345 67895</p>
+              <p className="text-gray-700">+92 321 7080012</p>
             </div>
           </div>
         </div>
