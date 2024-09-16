@@ -24,17 +24,17 @@ const Contact = () => {
                 <MdEmail />
               <p className="text-gray-700">email@gmail.com</p>
             </div>
-            <div className="flex items-center space-x-3">
-              <IoCall />
-              <p className="text-gray-700">+92 321 7080012</p>
-            </div>
+              <a href="tel:+923217080012" className="flex items-center space-x-3">
+                <IoCall />
+                <p className="text-gray-700">(+92) 321 7080012</p>
+              </a>
             <div className="flex items-center space-x-3">
               <FaAddressBook />
               <p className="text-gray-700">123 Street Name, Lahore, Pakistan</p>
             </div>
             <div className="flex items-center space-x-3 cursor-pointer" onClick={handleMassageSubmit}>
               <IoLogoWhatsapp />
-              <p className="text-gray-700">+92 321 7080012</p>
+              <p className="text-gray-700">(+92) 321 7080012</p>
             </div>
           </div>
         </div>
