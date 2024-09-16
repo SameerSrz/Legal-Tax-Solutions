@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { MdEmail } from "react-icons/md";
 import { FaAddressBook  } from "react-icons/fa6";
 import { IoCall } from "react-icons/io5";
@@ -6,9 +6,35 @@ import { IoLogoWhatsapp } from "react-icons/io";
 import {PageTitle} from './PageTitle';
 
 const Contact = () => {
+  const [fullName, setFullName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [termsAccepted, setTermsAccepted] = useState(false);
+
     const handleMassageSubmit = ()=>{
       window.open(`https://wa.me/923217080012`)
   }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    if (!termsAccepted) {
+      alert('Please accept the terms and conditions.');
+      return;
+    }
+
+    // WhatsApp phone number in international format, replace with your number
+    const phoneNumber = '+923164836481'; 
+
+    // Create a message with the form data
+    const whatsappMessage = `Full Name: ${fullName}\nEmail: ${email}\nMessage: ${message}`;
+
+    // Encode the message and create a WhatsApp API URL
+    const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(whatsappMessage)}`;
+
+    // Redirect the user to WhatsApp
+    window.open(whatsappURL, '_blank');
+  };
 
   return (
     <div id='contact' className="bg-gray-100 p-6 w-full mx-auto">
@@ -41,13 +67,15 @@ const Contact = () => {
         
         {/* Contact Form on the Right */}
         <div className="lg:w-7/12">
-          <form className="w-full mt-12 space-y-8">
+          <form className="w-full mt-12 space-y-8" onSubmit={handleSubmit}>
             <div className="flex flex-col gap-6 lg:flex-row lg:gap-8">
               <div className="flex-1">
                 <label htmlFor="full-name" className="block text-gray-700 font-medium mb-2">Full Name</label>
                 <input
                   id="full-name"
                   type="text"
+                  value={fullName}
+                  onChange={(e) => setFullName(e.target.value)}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="Enter your full name"
                 />
@@ -57,22 +85,20 @@ const Contact = () => {
                 <input
                   id="email"
                   type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="Enter your email address"
                 />
               </div>
-              {/* <input
-                  id="subject"
-                  type="text"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="Subject"
-                /> */}
             </div>
             <div>
               <label htmlFor="message" className="block text-gray-700 font-medium mb-2">Message</label>
               <textarea
                 id="message"
                 rows="8"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Enter your message"
               ></textarea>
@@ -81,6 +107,8 @@ const Contact = () => {
               <input
                 id="terms"
                 type="checkbox"
+                checked={termsAccepted}
+                onChange={(e) => setTermsAccepted(e.target.checked)}
                 className="h-4 w-4 border-gray-300 rounded text-blue-600 focus:ring-blue-500"
               />
               <label htmlFor="terms" className="text-gray-600">
