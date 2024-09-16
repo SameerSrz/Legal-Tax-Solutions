@@ -24,7 +24,7 @@ const Contact = () => {
     }
 
     // WhatsApp phone number in international format, replace with your number
-    const phoneNumber = '+923164836481'; 
+    const phoneNumber = '+923217080012'; 
 
     // Create a message with the form data
     const whatsappMessage = `Full Name: ${fullName}\nEmail: ${email}\nMessage: ${message}`;
