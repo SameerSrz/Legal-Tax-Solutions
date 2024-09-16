@@ -1,10 +1,15 @@
 import React from 'react'
 import { MdEmail } from "react-icons/md";
-import { FaAddressBook } from "react-icons/fa6";
+import { FaAddressBook  } from "react-icons/fa6";
 import { IoCall } from "react-icons/io5";
+import { IoLogoWhatsapp } from "react-icons/io";
 import {PageTitle} from './PageTitle';
 
 const Contact = () => {
+    const handleMassageSubmit = ()=>{
+      window.open(`https://wa.me/9234567895`)
+  }
+
   return (
     <div id='contact' className="bg-gray-100 p-6 w-full mx-auto">
       <PageTitle section="Contact Us" heading="Get in Touch with Us">
@@ -26,6 +31,10 @@ const Contact = () => {
             <div className="flex items-center space-x-3">
               <FaAddressBook />
               <p className="text-gray-700">123 Street Name, Lahore, Pakistan</p>
+            </div>
+            <div className="flex items-center space-x-3 cursor-pointer" onClick={handleMassageSubmit}>
+              <IoLogoWhatsapp />
+              <p className="text-gray-700">+92 345 67895</p>
             </div>
           </div>
         </div>

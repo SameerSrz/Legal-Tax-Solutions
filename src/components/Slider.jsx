@@ -1,8 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const companies = [
   { name: 'FBR', logo: 'assets/fbr.png' },
   { name: 'IPO', logo: 'assets/ipo.jpg' },
+  { name: 'Revenue', logo: 'assets/Revenue.png' },
+  { name: 'weboc', logo: 'assets/weboc.jpg' },
+  { name: 'pseb', logo: 'assets/pseb.png' },
+  { name: 'psw', logo: 'assets/psw.png' },
+  { name: 'secp', logo: 'assets/secp.png' },
   // Add more companies as needed
 ];
 
@@ -12,6 +17,14 @@ const Slider = () => {
   const totalItems = companies.length;
   const itemWidth = 200; // Width of each company item
   const containerWidth = itemWidth * visibleItems;
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      goToNextSlide();
+    }, 3000); // Slide every 3 seconds
+
+    return () => clearInterval(interval); // Cleanup interval on unmount
+  }, [currentIndex]);
 
   const goToNextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % (totalItems - visibleItems + 1));
@@ -32,15 +45,12 @@ const Slider = () => {
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
             <div className="inline-block rounded-lg bg-gray-200 px-3 py-1 text-sm text-gray-700">Our Partners</div>
-            {/* <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-              Companies We Work With
-            </h2> */}
           </div>
         </div>
 
         <div className="relative overflow-hidden pt-4 px-11">
           <div
-            className="flex space-x-6"
+            className="flex space-x-6 transition-transform duration-500 ease-in-out"
             style={{ transform: `translateX(-${currentIndex * itemWidth}px)`, width: `${itemWidth * totalItems}px` }}
           >
             {companies.map((company, index) => (
@@ -53,7 +63,7 @@ const Slider = () => {
           </div>
 
           {/* Slider Controls */}
-          <button
+          {/* <button
             onClick={goToPrevSlide}
             className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow-md focus:outline-none"
           >
@@ -64,7 +74,7 @@ const Slider = () => {
             className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow-md focus:outline-none"
           >
             &gt;
-          </button>
+          </button> */}
         </div>
       </div>
     </section>

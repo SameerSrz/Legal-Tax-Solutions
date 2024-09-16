@@ -28,7 +28,7 @@ const Banner = () => {
         >
           <img src={image.src} alt={image.text} className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center pt-[190px]"> 
-            <h2 style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 1.9)' }} className="text-white text-3xl md:text-5xl font-bold text-center"> Expert Tax Services for Individuals & Businesses. Simplify Your Taxes, Maximize Your Savings. Trust Legal Tax Solutions—Your Partner in Financial Success. </h2> 
+            <h2 style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 1.9)' }} className="text-white text-3xl md:text-5xl font-bold text-center p-2"> Expert Tax Services for Individuals & Businesses. Simplify Your Taxes, Maximize Your Savings. Trust Legal Tax Solutions—Your Partner in Financial Success. </h2> 
             </div>
         </div>
       ))}
