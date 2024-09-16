@@ -7,7 +7,7 @@ import {PageTitle} from './PageTitle';
 
 const Contact = () => {
     const handleMassageSubmit = ()=>{
-      window.open(`https://wa.me/9234567895`)
+      window.open(`https://wa.me/923217080012`)
   }
 
   return (

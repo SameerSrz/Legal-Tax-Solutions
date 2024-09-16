@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const companies = [
   { name: 'FBR', logo: 'assets/fbr.png' },
@@ -13,26 +13,37 @@ const companies = [
 
 const Slider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const visibleItems = 3; // Number of items visible at a time
   const totalItems = companies.length;
   const itemWidth = 200; // Width of each company item
-  const containerWidth = itemWidth * visibleItems;
+  const visibleItems = 3; // Number of items visible at a time
+  const sliderRef = useRef(null);
+
+  // Clone companies to create infinite scrolling effect
+  const clonedCompanies = [...companies, ...companies]; // Clone the array to loop back smoothly
 
   useEffect(() => {
     const interval = setInterval(() => {
       goToNextSlide();
     }, 3000); // Slide every 3 seconds
 
-    return () => clearInterval(interval); // Cleanup interval on unmount
+    return () => clearInterval(interval); // Cleanup on unmount
   }, [currentIndex]);
 
   const goToNextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % (totalItems - visibleItems + 1));
+    setCurrentIndex((prevIndex) => prevIndex + 1);
   };
 
-  const goToPrevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + (totalItems - visibleItems + 1)) % (totalItems - visibleItems + 1));
-  };
+  // Reset the slider position when reaching the cloned array
+  useEffect(() => {
+    if (currentIndex === totalItems) {
+      setTimeout(() => {
+        sliderRef.current.style.transition = 'none'; // Disable transition for immediate snap-back
+        setCurrentIndex(0); // Reset index back to the original items
+      }, 500); // Wait for the transition to complete before snapping back
+    } else {
+      sliderRef.current.style.transition = 'transform 0.5s ease-in-out'; // Enable smooth transition
+    }
+  }, [currentIndex, totalItems]);
 
   return (
     <section
@@ -50,10 +61,14 @@ const Slider = () => {
 
         <div className="relative overflow-hidden pt-4 px-11">
           <div
-            className="flex space-x-6 transition-transform duration-500 ease-in-out"
-            style={{ transform: `translateX(-${currentIndex * itemWidth}px)`, width: `${itemWidth * totalItems}px` }}
+            ref={sliderRef}
+            className="flex space-x-6"
+            style={{
+              transform: `translateX(-${currentIndex * itemWidth}px)`,
+              width: `${itemWidth * clonedCompanies.length}px`,
+            }}
           >
-            {companies.map((company, index) => (
+            {clonedCompanies.map((company, index) => (
               <div key={index} className="flex-shrink-0 bg-white rounded-lg border-2 overflow-hidden shadow-md" style={{ width: `${itemWidth}px`, height: '100px' }}>
                 <div className="flex items-center justify-center h-full">
                   <img src={company.logo} alt={company.name} className="h-full w-auto" />
@@ -62,19 +77,6 @@ const Slider = () => {
             ))}
           </div>
 
-          {/* Slider Controls */}
-          {/* <button
-            onClick={goToPrevSlide}
-            className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow-md focus:outline-none"
-          >
-            &lt;
-          </button>
-          <button
-            onClick={goToNextSlide}
-            className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow-md focus:outline-none"
-          >
-            &gt;
-          </button> */}
         </div>
       </div>
     </section>

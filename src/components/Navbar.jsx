@@ -11,7 +11,7 @@ const Navbar = () => {
   const closeMenu = () => setIsMenuOpen(false);
 
   const handleMassageSubmit = ()=>{
-    window.open(`https://wa.me/9234567895`)
+    window.open(`https://wa.me/923217080012`)
   }
 
   return (
