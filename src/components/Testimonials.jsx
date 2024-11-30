@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 
 const companies = [
-  { name: 'FBR', logo: 'assets/fbr.png' },
-  { name: 'IPO', logo: 'assets/ipo.jpg' },
-  // Add more companies as needed
+  { name: 'ARTISAN COFFEE', logo: 'assets/artisanCoffee.jpeg' },
+  { name: 'MANHATTAN BITES', logo: 'assets/manhattan.jpeg' },
+  { name: 'GLORIA JEANS', logo: 'assets/gloria.png' },
+  { name: 'LAHORE LAB', logo: 'assets/lahoreLab.png' },
+  { name: 'MUHAMMADI NIHARI', logo: 'assets/nehari.jpeg' },
 ];
 
 const Testimonials = () => {

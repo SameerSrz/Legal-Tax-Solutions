@@ -48,7 +48,7 @@ const Contact = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
                 <MdEmail />
-              <p className="text-gray-700">email@gmail.com</p>
+              <p className="text-gray-700">LEGALTAXSOLUTIONS.NET@gmail.com</p>
             </div>
               <a href="tel:+923217080012" className="flex items-center space-x-3">
                 <IoCall />
@@ -56,7 +56,7 @@ const Contact = () => {
               </a>
             <div className="flex items-center space-x-3">
               <FaAddressBook />
-              <p className="text-gray-700">123 Street Name, Lahore, Pakistan</p>
+              <p className="text-gray-700">Suit no 1 & 1A, 2nd floor sadiq plaza, the mall road, Lahore, Pakistan</p>
             </div>
             <div className="flex items-center space-x-3 cursor-pointer" onClick={handleMassageSubmit}>
               <IoLogoWhatsapp />

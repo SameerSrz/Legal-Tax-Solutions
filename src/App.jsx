@@ -1,5 +1,3 @@
-import { useState } from 'react'
-import './App.css'
 import Navbar from './components/Navbar'
 import Banner from './components/Banner'
 import Contact from './components/Contact'
@@ -8,6 +6,10 @@ import Services from './components/Services'
 import Footer from './components/Footer'
 import Slider from './components/Slider'
 import Testimonials from './components/Testimonials'
+import OurTeam from './components/OurTeam'
+
+import './App.css'
+import History from './components/History'
 
 function App() {
 
@@ -15,9 +17,11 @@ function App() {
     <>
       <Navbar/>
       <Banner/>
+      <Slider/>
       <About/>
       <Services/>
-      <Slider/>
+      <History/>
+      <OurTeam/>
       <Contact/>
       <Testimonials/>
       <Footer/>

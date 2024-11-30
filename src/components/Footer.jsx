@@ -7,9 +7,9 @@ const year = new Date().getFullYear();
 
 const Footer = ({ title = "Legal Tax Solutions", description = "Providing expert tax advice and strategic planning to help individuals and businesses navigate complex tax regulations and optimize their financial outcomes. Our goal is to ensure compliance, minimize liabilities, and achieve financial peace of mind through personalized legal solutions.",
      menus = [ { name: "other resources", items: [ { name: "Services", path: "#" },
-        { name: "About", path: "#" }, { name: "Contact Us", path: "#" }, { name: "Our Team", path: "#" } ] } ],
-        services = [ { name: "Our Services", items: [ { name: "Tax Planning and Strategy", path: "#" },
-            { name: "Tax Compliance", path: "#" }, { name: "International Taxation", path: "#" }, { name: "Tax Audits and Disputes", path: "#" } ] } ],
+        { name: "About", path: "#" }, { name: "Contact Us", path: "#" }, { name: "Our Team", path: "#our-team" } ] } ],
+        services = [ { name: "Our Services", items: [ { name: "General Sales Tax Number (GST)", path: "#services" },
+            { name: "Tax Returns", path: "#services" }, { name: "Audit Reports and Accounts", path: "#services" }, { name: "PRA Registration", path: "#services" } ] } ],
          copyright = `Copyright © ${year} Legal Tax Solutions` }) => {
   return (
     <motion.footer
@@ -28,7 +28,7 @@ const Footer = ({ title = "Legal Tax Solutions", description = "Providing expert
       >
         <div className="flex flex-wrap pt-6 text-center lg:text-left">
           <div className="w-full px-4 lg:w-6/12">
-            <h4 className="text-3xl font-semibold mb-4">{title}</h4>
+          <img src="/assets/logo1-footer.png" className="w-auto h-[100px] pb-4" alt="Legal tax Solutions Logo" style={{filter: 'invert(1) contrast(1.2)'}} />
             <p className="text-base font-normal lg:w-4/5">{description}</p>
             <div className="mt-6 mb-8 flex justify-center gap-4 lg:justify-start">
               <a href="https://www.facebook.com/hafizlastc" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
