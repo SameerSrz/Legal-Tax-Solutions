@@ -35,8 +35,8 @@ const Banner = () => {
           
           <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center pt-[190px]">
             <motion.h2
-              style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 1.9)' }}
-              className="text-white text-3xl md:text-5xl font-bold text-center p-4"
+              style={{ textShadow: '3px 2px 2px white' }}
+              className="text-[#836a28] text-3xl md:text-5xl font-bold text-center p-4"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, type: 'spring', stiffness: 100 }}

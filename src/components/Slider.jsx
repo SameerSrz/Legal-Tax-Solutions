@@ -69,7 +69,7 @@ const Slider = () => {
             }}
           >
             {clonedCompanies.map((company, index) => (
-              <div key={index} className="flex-shrink-0 bg-white rounded-lg border-2 overflow-hidden shadow-md" style={{ width: `${itemWidth}px`, height: '100px' }}>
+              <div key={index} className="flex-shrink-0 bg-[white] rounded-lg border-2 overflow-hidden shadow-md" style={{ width: `${itemWidth}px`, height: '100px' }}>
                 <div className="flex items-center justify-center h-full">
                   <img src={company.logo} alt={company.name} className="h-full w-auto" />
                 </div>

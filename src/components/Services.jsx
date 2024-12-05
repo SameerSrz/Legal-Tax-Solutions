@@ -75,7 +75,7 @@ const Services = () => {
   return (
     <motion.section
       id="services"
-      className="w-full py-12 md:py-20 bg-gray-100"
+      className="w-full py-12 md:py-20 bg-slate-50"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
@@ -106,7 +106,7 @@ const Services = () => {
             {services.map((service, index) => (
               <motion.div
                 key={index}
-                className="flex-shrink-0 w-72 bg-white shadow-md rounded-lg p-6 flex flex-col justify-between hover:shadow-lg transition-shadow duration-300"
+                className="flex-shrink-0 w-72 bg-gradient-to-b from-[#c3c2f7] to-[#d4c6a3] shadow-md rounded-lg p-6 flex flex-col justify-between hover:shadow-lg transition-shadow duration-300"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.2 * index }}
@@ -117,17 +117,17 @@ const Services = () => {
                     <img
                       src={service.logo}
                       alt={`${service.title} logo`}
-                      className="h-16 w-16 object-contain"
+                      className="h-16 w-16 object-contain bg-white rounded-[50%] m-5"
                     />
                   </div>
                 )}
                 {/* Title */}
-                <h3 className="text-lg font-semibold text-gray-700 mb-4">
+                <h3 className="text-lg font-semibold text-black mb-4">
                   {service.title}
                 </h3>
                 {/* Items or Description */}
                 {service.items.length > 0 ? (
-                  <ul className="text-sm text-gray-600 space-y-2">
+                  <ul className="text-sm text-gray-900 space-y-2">
                     {service.items.map((item, idx) => (
                       <li key={idx} className="flex items-start">
                         <span className="mr-2 text-green-500">&#10003;</span>
@@ -136,14 +136,14 @@ const Services = () => {
                     ))}
                   </ul>
                 ) : (
-                  <p className="text-sm text-gray-500 flex-grow">
+                  <p className="text-sm text-gray-900 flex-grow">
                     {service.description || 'Details available upon request.'}
                   </p>
                 )}
                 {/* Contact Button */}
                 <div className="mt-4">
                   <button
-                    className="w-full px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-900 transition duration-300"
+                    className="w-full px-4 py-2 bg-[#141444] text-white rounded-lg hover:bg-[#3e3e83] transition duration-300"
                     onClick={() => window.location.href = '#contact'} // Update with the actual contact page URL
                   >
                     Contact Us

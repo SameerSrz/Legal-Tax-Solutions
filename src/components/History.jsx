@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const History = () => {
   return (
-    <section className="bg-gradient-to-b from-white to-gray-100 py-16 px-6">
+    <section className="bg-gradient-to-b from-slate-50 to-[#63629dda] py-16 px-6">
       {/* Hero Section */}
       <motion.div
         className="text-center mb-16"
@@ -11,7 +11,7 @@ const History = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <p className="inline-block rounded-lg font-semibold bg-gray-200 px-3 py-1 text-sm text-gray-700">History of Legal Tax Solutions</p>
+        <p className="inline-block rounded-lg font-semibold bg-gray-200 px-3 py-1 text-sm text-black">History of Legal Tax Solutions</p>
         <h1 className="text-5xl font-bold text-primary mb-4">
           A Legacy of Trust and Expertise
         </h1>
@@ -23,7 +23,7 @@ const History = () => {
 
       {/* Detailed Introduction Section */}
       <motion.div
-        className="bg-white rounded-lg shadow-lg p-8 mt-6 max-w-5xl mx-auto"
+        className=" bg-gradient-to-r from-white to-[#63629d] rounded-lg shadow-lg p-8 mt-6 max-w-5xl mx-auto"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}

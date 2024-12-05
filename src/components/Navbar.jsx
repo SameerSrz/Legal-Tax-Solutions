@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <div>
       {/* Top Bar */}
-      <div className="w-full bg-gray-800 px-4 text-white text-sm py-2 flex justify-center items-center">
+      <div className="w-full bg-[#141444] px-4 text-white text-sm py-2 flex justify-center items-center">
         <div className="flex space-x-9">
           <span className='flex flex-row'><IoCall className='h-4 w-6 pt-1' /><a href="tel:+923217080012">Phone: (+92) 321 7080012</a></span>
           <span className='flex flex-row cursor-pointer' onClick={handleMassageSubmit}><IoLogoWhatsapp className='h-4 w-6 pt-1' />(+92) 321 7080012</span>
@@ -26,13 +26,13 @@ const Navbar = () => {
       </div>
 
       {/* Navbar */}
-      <div className="top-[35px] w-full h-20 bg-white z-50 flex items-center justify-between px-6">
+      <div className="top-[35px] w-full h-20 bg-[#857447] z-50 flex items-center justify-between px-6">
         <div className="flex items-center space-x-2">
           <img src="/assets/logo1.png" className="w-auto h-[200px]" alt="Legal tax Solutions Logo" />
           {/* <span className="text-lg font-semibold">Legal Tax Solutions</span> */}
         </div>
 
-        <div className="hidden md:flex space-x-8">
+        <div className="hidden md:flex space-x-8 text-white">
           <motion.a
             href="#home"
             className="cursor-pointer font-semibold"
@@ -79,7 +79,7 @@ const Navbar = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            <span className="font-semibold bg-gray-800 text-white p-3 rounded-md">
+            <span className="font-semibold bg-[#141444] text-white p-3 rounded-md">
               Request Consultation
             </span>
           </motion.a>

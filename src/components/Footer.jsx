@@ -17,7 +17,7 @@ const Footer = ({ title = "Legal Tax Solutions", description = "Providing expert
       initial={{ height: 0 }}
       animate={{ height: "unset" }}
       transition={{ delay: animationStart, duration: 1 }}
-      className="relative px-4 pt-8 pb-6 bg-gray-800 text-white"
+      className="relative px-4 pt-8 pb-6 bg-[#141444] text-white"
     >
       <motion.div
         variants={reveal}

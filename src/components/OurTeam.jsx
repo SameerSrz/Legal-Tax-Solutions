@@ -7,12 +7,12 @@ import { motion } from 'framer-motion';
 
 const OurTeam = () => {
   return (
-    <section id="our-team" className="w-full py-12 md:py-18 lg:py-14 xl:py-14 text-black bg-gray-50">
+    <section id="our-team" className="w-full py-12 md:py-18 lg:py-14 xl:py-14 text-black bg-[#63629dda]">
       <div className="container mx-auto px-4 md:px-6">
         {/* Header Section */}
         <div className="text-center mb-12">
           <motion.h1
-            className="text-3xl font-bold text-gray-900 sm:text-4xl lg:text-5xl xl:text-6xl"
+            className="text-3xl font-bold text-black sm:text-4xl lg:text-5xl xl:text-6xl"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, type: 'spring', stiffness: 100 }}
@@ -20,7 +20,7 @@ const OurTeam = () => {
             Our Team
           </motion.h1>
           <motion.p
-            className="max-w-3xl mx-auto text-lg text-gray-700 mt-4"
+            className="max-w-3xl mx-auto text-lg text-gray-900 mt-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
@@ -33,7 +33,7 @@ const OurTeam = () => {
         {/* History Section */}
         <div className="text-center mb-16">
           <motion.h2
-            className="text-2xl font-semibold text-gray-900 sm:text-3xl lg:text-4xl"
+            className="text-2xl font-semibold text-black sm:text-3xl lg:text-4xl"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, type: 'spring', stiffness: 100 }}
@@ -41,7 +41,7 @@ const OurTeam = () => {
             A Legacy of Trust and Expertise in Tax Consultancy
           </motion.h2>
           <motion.p
-            className="max-w-3xl mx-auto text-lg text-gray-600 mt-4"
+            className="max-w-3xl mx-auto text-lg text-gray-900 mt-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
@@ -64,7 +64,7 @@ const OurTeam = () => {
               transition={{ delay: 0.6, type: 'spring', stiffness: 100 }}
             />
             <motion.h3
-              className="text-xl font-bold text-gray-900"
+              className="text-xl font-bold text-black"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
@@ -72,7 +72,7 @@ const OurTeam = () => {
               Muhammad Shahzaib Malik
             </motion.h3>
             <motion.p
-              className="text-gray-600 text-center"
+              className="text-gray-900 text-center"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
@@ -80,7 +80,7 @@ const OurTeam = () => {
               CEO/Founder, Legal Tax Solutions
             </motion.p>
             <motion.p
-              className="text-gray-600 text-center max-w-md"
+              className="text-gray-900 text-center max-w-md"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.9 }}
@@ -100,7 +100,7 @@ const OurTeam = () => {
               transition={{ delay: 0.6, type: 'spring', stiffness: 100 }}
             />
             <motion.h3
-              className="text-xl font-bold text-gray-900"
+              className="text-xl font-bold text-black"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
@@ -108,7 +108,7 @@ const OurTeam = () => {
               Anees ul Rehman Butt
             </motion.h3>
             <motion.p
-              className="text-gray-600 text-center"
+              className="text-gray-900 text-center"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
@@ -116,7 +116,7 @@ const OurTeam = () => {
               Director, Legal Tax Solutions
             </motion.p>
             <motion.p
-              className="text-gray-600 text-center max-w-md"
+              className="text-gray-900 text-center max-w-md"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.9 }}
