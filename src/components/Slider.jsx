@@ -33,15 +33,14 @@ const Slider = () => {
     setCurrentIndex((prevIndex) => prevIndex + 1);
   };
 
-  // Reset the slider position when reaching the cloned array
   useEffect(() => {
     if (currentIndex === totalItems) {
       setTimeout(() => {
-        sliderRef.current.style.transition = 'none'; // Disable transition for immediate snap-back
-        setCurrentIndex(0); // Reset index back to the original items
-      }, 500); // Wait for the transition to complete before snapping back
+        sliderRef.current.style.transition = 'none'; 
+        setCurrentIndex(0); 
+      }, 500); 
     } else {
-      sliderRef.current.style.transition = 'transform 0.5s ease-in-out'; // Enable smooth transition
+      sliderRef.current.style.transition = 'transform 0.5s ease-in-out'; 
     }
   }, [currentIndex, totalItems]);
 
@@ -55,7 +54,7 @@ const Slider = () => {
       >
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <div className="inline-block rounded-lg bg-gray-200 px-3 py-1 text-sm text-gray-700">Our Partners</div>
+            <div className="inline-block rounded-lg bg-gray-200 px-3 py-1 text-sm text-gray-700">Our Expertise In</div>
           </div>
         </div>
 

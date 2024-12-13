@@ -56,7 +56,7 @@ const OurTeam = () => {
           {/* CEO Section */}
           <div className="flex flex-col items-center space-y-4">
             <motion.img
-              src='/assets/team-1.jpg'
+              src='/assets/founder.jpeg'
               alt="Muhammad Shahzaib Malik"
               className="rounded-full w-40 h-40 object-cover shadow-lg"
               initial={{ opacity: 0, scale: 0.8 }}
@@ -92,7 +92,7 @@ const OurTeam = () => {
           {/* Director Section */}
           <div className="flex flex-col items-center space-y-4">
             <motion.img
-              src='/assets/team-1.jpg'
+              src='/assets/director.jpeg'
               alt="Anees ul Rehman Butt"
               className="rounded-full w-40 h-40 object-cover shadow-lg"
               initial={{ opacity: 0, scale: 0.8 }}
