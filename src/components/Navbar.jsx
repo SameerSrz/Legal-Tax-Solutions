@@ -92,13 +92,74 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="fixed inset-0 bg-white z-40 flex flex-col items-center justify-center space-y-4">
-            <IoClose className="text-2xl cursor-pointer absolute top-4 right-4" onClick={closeMenu} />
-            <a href="#home" className="text-lg font-semibold" onClick={closeMenu}>Home</a>
-            <a href="#services" className="text-lg font-semibold" onClick={closeMenu}>Services</a>
-            <a href="#about" className="text-lg font-semibold" onClick={closeMenu}>About Us</a>
-            <a href="#team" className="text-lg font-semibold" onClick={closeMenu}>Our Team</a>
-            <a href="#contact" className="text-lg font-semibold" onClick={closeMenu}>Contact Us</a>
+          <div className="fixed inset-0 bg-[#857447] z-50 flex flex-col items-center justify-center p-6 transition-all duration-300">
+            {/* Close Icon */}
+            <IoClose 
+              className="text-4xl text-[#141444] cursor-pointer absolute top-6 right-6 hover:scale-110 transition-transform duration-200" 
+              onClick={closeMenu} 
+            />
+
+            {/* Logo */}
+            <div className="flex flex-col items-center">
+            <img src="/assets/logo1.png" className="w-auto h-[300px]" alt="Legal tax Solutions Logo" />
+            </div>
+
+            {/* Navigation Links */}
+            <nav className="flex flex-col items-center w-full max-w-md space-y-2 mb-[190px]">
+              <a 
+                href="#home" 
+                className="w-full text-center py-3 px-6 bg-[#141444] text-white font-semibold rounded-lg shadow-md hover:scale-105 hover:shadow-lg transition-transform duration-300"
+                onClick={closeMenu}
+              >
+                Home
+              </a>
+              <a 
+                href="#services" 
+                className="w-full text-center py-3 px-6 bg-[#141444] text-white font-semibold rounded-lg shadow-md hover:scale-105 hover:shadow-lg transition-transform duration-300"
+                onClick={closeMenu}
+              >
+                Services
+              </a>
+              <a 
+                href="#about" 
+                className="w-full text-center py-3 px-6 bg-[#141444] text-white font-semibold rounded-lg shadow-md hover:scale-105 hover:shadow-lg transition-transform duration-300"
+                onClick={closeMenu}
+              >
+                About Us
+              </a>
+              <a 
+                href="#our-team" 
+                className="w-full text-center py-3 px-6 bg-[#141444] text-white font-semibold rounded-lg shadow-md hover:scale-105 hover:shadow-lg transition-transform duration-300"
+                onClick={closeMenu}
+              >
+                Our Team
+              </a>
+              <a 
+                href="#contact" 
+                className="w-full text-center py-3 px-6 bg-[#141444] text-white font-semibold rounded-lg shadow-md hover:scale-105 hover:shadow-lg transition-transform duration-300"
+                onClick={closeMenu}
+              >
+                Contact Us
+              </a>
+            </nav>
+
+
+            {/* Call to Action */}
+            {/* <motion.a
+            href="#contact"
+            className="cursor-pointer"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <span className="font-semibold bg-[#141444] text-white p-3 rounded-md">
+              Request Consultation
+            </span>
+          </motion.a> */}
+
+            {/* Footer
+            <footer className="absolute bottom-6 text-sm text-gray-600">
+              © 2024 Legal Tax Solutions. All Rights Reserved.
+            </footer> */}
           </div>
         )}
       </div>
